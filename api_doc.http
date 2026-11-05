@@ -1,0 +1,216 @@
+### =========================
+### CAKE APIs
+### =========================
+
+### All cake list API
+GET http://127.0.0.1:8000/cakes/
+
+### Create a cake
+POST http://127.0.0.1:8000/cakes/
+#Authorization: Token ccf14c25dbde03603412c63ca24e6f6cd2ab9204
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzkzNjkzMTM0LCJpYXQiOjE3OTM2OTI4MzQsImp0aSI6IjE4NmFhNDM5MTdlODQyNWM5NGY4MTUxYTdlMGI2MzFlIiwidXNlcl9pZCI6IjYifQ.HmawJXjXYfedbYDIgNERFbe4VPZMxaAmoaWu73baP8s
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+nalla cake
+--abc
+Content-Disposition: form-data; name="description"
+
+valya konam onmillathe oru cake
+--abc
+Content-Disposition: form-data; name="photo"; filename="image.png"
+Content-Type: image/png
+
+< ./image.png
+--abc
+Content-Disposition: form-data; name="category"
+
+1
+--abc
+Content-Disposition: form-data; name="shape"
+
+1
+--abc
+Content-Disposition: form-data; name="weight"
+
+1
+--abc
+Content-Disposition: form-data; name="price"
+
+1500
+--abc--
+
+
+### Retrieve all cakes
+GET http://127.0.0.1:8000/cakes/
+
+
+### Update a cake
+PATCH http://127.0.0.1:8000/cakes/1/
+Authorization: Token <YOUR_TOKEN>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Chocolate Vancho
+--abc--
+
+
+### Delete a cake
+DELETE http://127.0.0.1:8000/cakes/1/
+Authorization: Token <YOUR_TOKEN>
+
+
+### =========================
+### CATEGORY APIs
+### =========================
+
+### All category list
+GET http://127.0.0.1:8000/category/
+
+
+### Create a category
+POST http://127.0.0.1:8000/category/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Normal Cakes
+--abc--
+
+
+### Retrieve a category
+GET http://127.0.0.1:8000/category/1/
+
+
+### Update a category
+PATCH http://127.0.0.1:8000/category/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Party Cakes
+--abc--
+
+
+### Delete a category
+DELETE http://127.0.0.1:8000/category/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+
+
+### =========================
+### SHAPE APIs
+### =========================
+
+### All shape list
+GET http://127.0.0.1:8000/shape/
+
+
+### Create a shape
+POST http://127.0.0.1:8000/shape/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Rhombus
+--abc--
+
+
+### Retrieve a shape
+GET http://127.0.0.1:8000/shape/1/
+
+
+### Update a shape
+PATCH http://127.0.0.1:8000/shape/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Round
+--abc--
+
+
+### Delete a shape
+DELETE http://127.0.0.1:8000/shape/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+
+
+### =========================
+### WEIGHT APIs
+### =========================
+
+### All weight list
+GET http://127.0.0.1:8000/weight/
+
+
+### Create a weight
+POST http://127.0.0.1:8000/weight/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+1kg
+--abc--
+
+
+### Retrieve a weight
+GET http://127.0.0.1:8000/weight/1/
+
+
+### Update a weight
+PATCH http://127.0.0.1:8000/weight/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+Content-Type: multipart/form-data; boundary=abc
+
+--abc
+Content-Disposition: form-data; name="name"
+
+Half Kg
+--abc--
+
+
+### Delete a weight
+DELETE http://127.0.0.1:8000/weight/1/
+Authorization: Basic <BASE64_USERNAME_PASSWORD>
+
+
+### =========================
+### LOGIN API
+### =========================
+
+### Login
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username": "johndoe1@gmail.com",
+    "password": "john123"
+}
+
+### register api
+POST http://127.0.0.1:8000/register/
+Content-Type: application/json
+
+{
+    "username": "vsh675@mailinator.com",
+    "firstnmae":"vsh",
+    "role":"User",
+    "password": "vsh123"
+}
+
+
+
+
